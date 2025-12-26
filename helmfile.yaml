@@ -13,9 +13,10 @@ environments:
 releases:
   - name: backend
     namespace: softconsist
-    chart: C:/Users/Admin/Desktop/Ashutsoh/Git/softconsist-app-2/backend/helm/backend
+    chart: ./backend/helm/backend
+    # values are provided per-environment in the `environments:` section above
 
   - name: frontend
     namespace: softconsist
-    chart: C:/Users/Admin/Desktop/Ashutsoh/Git/softconsist-app-2/frontend/helm/frontend
-
+    chart: ./frontend/helm/frontend
+    # values are provided per-environment in the `environments:` section above

@@ -1,0 +1,4 @@
+image:
+  tag: prod
+
+replicaCount: 4

@@ -1,9 +1,12 @@
-replicaCount: 2
+replicaCount: 1
 
 image:
-  repository: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-frontend
-  tag: latest
+  repository: softconsist/frontend
+  tag: dev
+  pullPolicy: IfNotPresent
 
 service:
+  type: ClusterIP
   port: 80
 
+resources: {}
