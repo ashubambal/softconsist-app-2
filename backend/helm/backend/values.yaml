@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-backend:latest
+  repository: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-backend
   tag: dev
   pullPolicy: IfNotPresent
 
@@ -10,3 +10,5 @@ service:
   port: 3000
 
 resources: {}
+
+imagePullSecrets: []

@@ -1,5 +1,7 @@
 image:
+  repository: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-frontend
   tag: dev
+  pullPolicy: IfNotPresent
 
 replicaCount: 1
 
