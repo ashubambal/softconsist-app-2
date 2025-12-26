@@ -1,0 +1,51 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.*
+
+# Build output
+dist/
+build/
+coverage/
+
+# Dependency directories
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Editors
+*.swp
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Helm / package artifacts
+*.tgz
+.helm/
+
+# Kubernetes / kubeconfig
+.kube/
+kubeconfig
+
+# Terraform
+.terraform/
+
+# Secrets
+secrets.yaml
+*.secret
