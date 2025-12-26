@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-backend
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 8080
+

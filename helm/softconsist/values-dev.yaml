@@ -1,0 +1,8 @@
+backend:
+  image:
+    tag: dev
+
+frontend:
+  image:
+    tag: dev
+

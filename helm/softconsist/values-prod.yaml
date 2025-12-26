@@ -1,0 +1,10 @@
+backend:
+  replicaCount: 4
+  image:
+    tag: prod
+
+frontend:
+  replicaCount: 4
+  image:
+    tag: prod
+
