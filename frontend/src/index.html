@@ -2,46 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SoftConsist Store</title>
+  <title>SoftConsist – Big Billion Sale</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="navbar">
-    <div class="logo">🛒 SoftConsist</div>
-    <div class="tagline">Mini E-Commerce Platform</div>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🛒 SoftConsist</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart 🛍️</a>
+    <a href="profile.html">Profile 👤</a>
+    <a href="login.html" class="login-btn">Login</a>
+  </nav>
+</header>
 
-  <!-- MAIN CONTAINER -->
-  <main class="container">
+<!-- FESTIVAL BANNER -->
+<section class="sale-banner">
+  <h1>🎉 BIG BILLION FESTIVE SALE 🎉</h1>
+  <p>Flat <b>50% OFF</b> | Use Code <span>BIG50</span></p>
+</section>
 
-    <!-- ADD PRODUCT CARD -->
-    <section class="card add-product">
-      <h2>Add Product</h2>
+<!-- PRODUCTS -->
+<main class="container">
+  <h2 class="section-title">🔥 Trending Products</h2>
+  <div id="list" class="product-grid"></div>
+</main>
 
-      <div class="form-group">
-        <input id="name" type="text" placeholder="Product Name" />
-        <input id="price" type="number" placeholder="Price (₹)" />
-      </div>
+<footer class="footer">
+  © 2025 SoftConsist | Kubernetes • ECR • MySQL
+</footer>
 
-      <button class="btn-primary" onclick="addProduct()">Add Product</button>
-    </section>
-
-    <!-- PRODUCT LIST -->
-    <section class="card">
-      <h2>Products</h2>
-      <div id="list" class="product-grid"></div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    © 2025 SoftConsist | Built with Kubernetes & ECR
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
 
