@@ -1,35 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart | SoftConsist</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cart — Shoply</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Shoply</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="navbar">
-  <div class="logo">SoftConsist</div>
-  <a href="index.html" class="nav-back">Back</a>
-</header>
+  <main class="container cart-page">
+    <h2>Your Cart</h2>
+    <div class="cart-grid">
+      <div class="cart-items" id="cart-items">
+        <!-- Items injected by script.js -->
+      </div>
+      <aside class="cart-summary">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-line">
+            <span>Subtotal</span><span id="subtotal">₹0</span>
+          </div>
+          <div class="summary-line">
+            <span>Delivery</span><span id="delivery">₹0</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span><span id="total">₹0</span>
+          </div>
+          <button class="btn primary" id="checkout-btn">Checkout</button>
+        </div>
+      </aside>
+    </div>
+  </main>
 
-<main class="container">
-  <h2>Your Cart</h2>
-
-  <div class="cart-item">
-    <span class="item-name">iPhone 15</span>
-    <span class="item-price">₹80,000</span>
-  </div>
-
-  <div class="promo">
-    <input type="text" placeholder="Enter promo code">
-    <button class="btn-primary">Apply</button>
-  </div>
-
-  <h3 class="total">Total: ₹40,000</h3>
-  <button class="btn-primary full-width">Place Order</button>
-</main>
-
+  <script src="script.js"></script>
 </body>
 </html>
-
