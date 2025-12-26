@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  backend:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-26T14:13:34.727556182Z"
+    description: Backend application chart
+    digest: da51b4b9cf8359b62eac7a90c76719f8d2086f5f3a370aec66b14ab11acd3f3c
+    name: backend
+    type: application
+    urls:
+    - https://ashubambal.github.io/softconsist-app-2/charts/backend-0.1.0.tgz
+    version: 0.1.0
+  frontend:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-12-26T14:13:34.727686546Z"
+    description: Frontend application chart
+    digest: 48f003c12028203ed6981870b45569a4d306e245ea962bd021d136a1f9cd3494
+    name: frontend
+    type: application
+    urls:
+    - https://ashubambal.github.io/softconsist-app-2/charts/frontend-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-12-26T14:13:34.727283373Z"
