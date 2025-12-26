@@ -11,18 +11,12 @@ function loadProducts() {
         list.innerHTML += `
           <div class="product-card">
             <h3>${p.name}</h3>
-            <p class="price">₹${p.price}</p>
-            <button onclick="addToCart('${p.name}', ${p.price})">
-              Add to Cart
-            </button>
+            <div class="price">₹${p.price}</div>
+            <button>Add to Cart</button>
           </div>
         `;
       });
     });
-}
-
-function addToCart(name, price) {
-  alert(`${name} added to cart 🛒`);
 }
 
 loadProducts();

@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cart – SoftConsist</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | SoftConsist</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
-  <div class="logo">🛒 SoftConsist</div>
-  <a href="index.html">⬅ Back</a>
+  <div class="logo">SoftConsist</div>
+  <a href="index.html" class="nav-back">Back</a>
 </header>
 
 <main class="container">
   <h2>Your Cart</h2>
 
   <div class="cart-item">
-    <span>iPhone 15</span>
-    <span>₹80,000</span>
+    <span class="item-name">iPhone 15</span>
+    <span class="item-price">₹80,000</span>
   </div>
 
   <div class="promo">
-    <input placeholder="Enter Promo Code" />
+    <input type="text" placeholder="Enter promo code">
     <button class="btn-primary">Apply</button>
   </div>
 
-  <h3>Total: ₹40,000</h3>
-  <button class="btn-primary">Place Order</button>
+  <h3 class="total">Total: ₹40,000</h3>
+  <button class="btn-primary full-width">Place Order</button>
 </main>
 
 </body>

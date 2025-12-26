@@ -1,51 +1,35 @@
-nav a {
-  color: white;
-  margin-left: 20px;
+.nav-back {
   text-decoration: none;
   font-size: 14px;
+  color: #555;
 }
 
-.sale-banner {
-  background: linear-gradient(90deg,#ff9800,#f44336);
-  color: white;
-  text-align: center;
-  padding: 25px;
-}
-
-.sale-banner span {
-  background: #000;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.section-title {
-  margin-bottom: 20px;
-}
-
-.auth-body {
+.cart-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.auth-card {
+  justify-content: space-between;
+  padding: 14px;
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.auth-card input {
-  width: 100%;
+  border-radius: 8px;
   margin-bottom: 15px;
 }
 
-.profile-card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  width: 300px;
+.promo {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.auth-footer {
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.total {
+  margin: 20px 0;
 }
 
