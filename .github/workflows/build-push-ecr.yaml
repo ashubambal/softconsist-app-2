@@ -1,0 +1,27 @@
+name: Build & Push to ECR
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: : arn:aws:iam::041326371952:role/github-ecr-role
+        aws-region: ap-south-1
+
+    - name: Login to ECR
+      uses: aws-actions/amazon-ecr-login@v2
+
+    - name: Build & Push Frontend
+      run: |
+        docker build -t softconsist-frontend frontend/
+        docker tag softconsist-frontend:latest 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-frontend:latest
+        docker push 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-frontend:latest
+
