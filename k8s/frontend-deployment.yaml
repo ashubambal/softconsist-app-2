@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: softconsist-frontend
+  namespace: softconsist
+  labels:
+    app: softconsist-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: softconsist-frontend
+  template:
+    metadata:
+      labels:
+        app: softconsist-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
