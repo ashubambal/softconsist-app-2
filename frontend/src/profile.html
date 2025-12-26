@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Profile — Shoply</title>
+  <title>Profile — SoftConsist</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Shoply</a>
-      <nav class="nav">
+      <a class="brand" href="index.html">
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#6c5ce7"/>
+          <path d="M6 12h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">SoftConsist</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="cart.html">Cart</a>
         <a href="profile.html">Profile</a>
       </nav>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </header>
 
@@ -22,7 +34,7 @@
     <div class="profile-grid">
       <section class="profile-card">
         <div class="avatar" id="avatar">A</div>
-        <h3 id="profile-name">Ashutosh</h3>
+        <h3 id="profile-name">User</h3>
         <p class="muted" id="profile-email">you@example.com</p>
         <button class="btn ghost" onclick="logout()">Sign out</button>
       </section>
