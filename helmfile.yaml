@@ -12,11 +12,9 @@ environments:
 ---
 releases:
   - name: backend
-    namespace: softconsist
-    chart: ./backend/helm/backend
-    # values are provided per-environment in the `environments:` section above
+    chart: oci://041326371952.dkr.ecr.ap-south-1.amazonaws.com/backend
+    version: 0.1.0
 
   - name: frontend
-    namespace: softconsist
-    chart: ./frontend/helm/frontend
-    # values are provided per-environment in the `environments:` section above
+    chart: oci://041326371952.dkr.ecr.ap-south-1.amazonaws.com/frontend
+    version: 0.1.0

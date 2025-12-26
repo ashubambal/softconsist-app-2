@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: softconsist/backend
+  repository: 041326371952.dkr.ecr.ap-south-1.amazonaws.com/softconsist-2/softconsist-backend:latest
   tag: dev
   pullPolicy: IfNotPresent
 
