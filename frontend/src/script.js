@@ -1,4 +1,4 @@
-const API = "http://BACKEND_SERVICE/api/products";
+const API = "/api/products";
 
 function loadProducts() {
   fetch(API)
