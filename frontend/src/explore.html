@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Explore — SoftConsist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header (reuse same header markup from index.html) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="logo" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#6c5ce7"/>
+          <path d="M6 12h12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">SoftConsist</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="explore.html" class="active">Explore</a>
+        <a href="#" id="tab-hire">Hire Talent</a>
+        <a href="#" id="tab-gethired">Get Hired</a>
+        <a href="#" id="tab-community">Community</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html" class="btn ghost">Sign up</a>
+      </nav>
+
+      <div class="search-wrap">
+        <input id="global-search" placeholder="Search people, jobs, posts..." aria-label="Search" />
+      </div>
+
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="tabs" role="region" aria-label="Explore sections">
+      <div class="tabs-nav" role="tablist" aria-label="Sections">
+        <button class="tab-btn active" data-tab="explore" role="tab" aria-selected="true">Explore</button>
+        <button class="tab-btn" data-tab="hire" role="tab">Hire Talent</button>
+        <button class="tab-btn" data-tab="gethired" role="tab">Get Hired</button>
+        <button class="tab-btn" data-tab="community" role="tab">Community</button>
+      </div>
+
+      <div class="tabs-panel">
+        <!-- Explore -->
+        <section id="panel-explore" class="tab-panel" role="tabpanel">
+          <div class="panel-header">
+            <h2>Explore curated collections</h2>
+            <div class="filters">
+              <select id="explore-category" aria-label="Category">
+                <option value="">All categories</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home</option>
+                <option>Beauty</option>
+                <option>Designers</option>
+              </select>
+              <select id="explore-sort" aria-label="Sort">
+                <option value="popular">Popular</option>
+                <option value="new">Newest</option>
+                <option value="price-low">Price: Low → High</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="explore-grid" class="products-grid" aria-live="polite">
+            <!-- populated by script.js -->
+          </div>
+        </section>
+
+        <!-- Hire Talent -->
+        <section id="panel-hire" class="tab-panel hidden" role="tabpanel" aria-hidden="true">
+          <div class="panel-header">
+            <h2>Hire Talent</h2>
+            <div class="filters">
+              <input id="hire-search" placeholder="Search skills, names, locations" aria-label="Search talent" />
+              <select id="hire-skill" aria-label="Skill filter">
+                <option value="">All skills</option>
+                <option>Frontend</option>
+                <option>Backend</option>
+                <option>Design</option>
+                <option>Marketing</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid-two">
+            <div id="talent-list" class="card-list">
+              <!-- talent cards injected by script.js -->
+            </div>
+
+            <aside class="card summary-card">
+              <h3>Shortlist</h3>
+              <div id="shortlist" class="muted">No candidates yet</div>
+              <div class="mt-4">
+                <button class="btn primary" id="contact-shortlist">Contact Shortlisted</button>
+                <button class="btn ghost" id="clear-shortlist">Clear</button>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Get Hired -->
+        <section id="panel-gethired" class="tab-panel hidden" role="tabpanel" aria-hidden="true">
+          <div class="panel-header">
+            <h2>Jobs for you</h2>
+            <div class="filters">
+              <input id="jobs-search" placeholder="Search jobs, companies..." aria-label="Search jobs" />
+              <select id="jobs-type" aria-label="Job type">
+                <option value="">All types</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Contract</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="jobs-list" class="card-list">
+            <!-- jobs injected by script.js -->
+          </div>
+        </section>
+
+        <!-- Community -->
+        <section id="panel-community" class="tab-panel hidden" role="tabpanel" aria-hidden="true">
+          <div class="panel-header">
+            <h2>Community</h2>
+            <p class="muted">Share updates, ask questions, and connect.</p>
+          </div>
+
+          <div class="card composer">
+            <textarea id="post-text" placeholder="Share something with the community..." rows="3" aria-label="Write a post"></textarea>
+            <div class="composer-actions">
+              <button class="btn primary" id="post-btn">Post</button>
+              <button class="btn ghost" id="clear-post">Clear</button>
+            </div>
+          </div>
+
+          <div id="feed" class="card-list">
+            <!-- posts injected by script.js -->
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Hire modal -->
+  <div id="hire-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="hire-title">
+      <button class="modal-close" id="hire-modal-close" aria-label="Close">✕</button>
+      <div id="hire-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // quick navigation links to tabs
+    document.getElementById('tab-hire').addEventListener('click', (e)=>{ e.preventDefault(); openTab('hire'); });
+    document.getElementById('tab-gethired').addEventListener('click', (e)=>{ e.preventDefault(); openTab('gethired'); });
+    document.getElementById('tab-community').addEventListener('click', (e)=>{ e.preventDefault(); openTab('community'); });
+  </script>
+</body>
+</html>
